@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    footer {
+        position: fixed;
+        padding: 10px 10px 10px 0px;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+<head>
+    <script src="scripts.js"></script>
+    <script>
+        function main(event) {
+            var language = getLanguage();
+            if (language == "ru-RU") {
+                document.getElementById("header").innerHTML = "Временная зона устройства";
+            } else {
+                document.getElementById("header").innerHTML = "Device's time zone";
+            }
+            document.getElementById("timezone").innerHTML = getTimeZone()
+        }
+        window.addEventListener("load", main);
+        window.addEventListener("load", setFooter);
+    </script>
+</head>
+
+<body>
+    <h2 id="header"></h2>
+    <p id="timezone"></p>
+</body>
+<footer>
+
+</footer>
+
+</html>

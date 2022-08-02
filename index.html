@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <script src="scripts.js"></script>
+    <script>
+        function createTimezoneLink() {
+            var language = getLanguage();
+            var defaultMessage = "Determine device's time zone"
+            if (language == "ru-RU") {
+                document.getElementById("timezone").innerHTML = "Узнать временную зону устройства";
+            } else {
+                document.getElementById("timezone").innerHTML = "Determine device's time zone";
+            }
+        }
+        function main() {
+            createTimezoneLink()
+        }
+        window.addEventListener("load", main);
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a id="timezone" href="timezone.html"></a>
+        </li>
+    </ul>
+</body>
+
+</html>
